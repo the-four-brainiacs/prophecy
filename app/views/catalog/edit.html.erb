@@ -1,0 +1,46 @@
+Indica la URL donde consultar tu catalogo de productos. La URL debe devolver un JSON de productos con la siguiente sintaxis:
+
+<%= form_for(@setting, url: catalog_path) do |f| %>
+  <% if @setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@setting.errors.count, "error") %> impide guardar los cambios:</h2>
+
+      <ul>
+      <% @setting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :catalog_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<pre>
+  [
+    {
+      "product_id": "ID del product",
+      "name": {
+        "en": "Nombre en este idioma",
+        "es": "Nombre en este idioma"
+      },
+      "description": {
+        "en": "Descripción en este idioma",
+        "es": "Descripción en este idioma"
+      },
+      "url": {
+        "en": "URL en este idioma",
+        "es": "URL en este idioma"
+      },
+      "price": "precio",
+      "image_url": "URL de la imagen",
+      "categories": ["categoria1", "categoria2"]
+    }
+  ]
+</pre>

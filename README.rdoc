@@ -12,3 +12,6 @@ Una plataforma de recomedación de productos para tu e-commerce.
 
 == Herramientas
 - Robomongo: Interfaz gráfica de administración para MongoDB {robomongo.org}[https://robomongo.org].
+
+== Desarrollo
+- Feed de productos: Para simular una API con un catalogo de productos, ejecutar <tt>ruby -run -e httpd ./tmp -p 8000</tt>. Tendrás un catalogo JSON de productos en _http://localhost:8000/catalog_example.json_.
