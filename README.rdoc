@@ -1,28 +1,14 @@
-== README
+= Prophecy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Una plataforma de recomedación de productos para tu e-commerce.
 
-Things you may want to cover:
+== Requisitos
+- Ruby 2.3.0
+- MongoDB
 
-* Ruby version
+== Instalación
+- Renombrar el fichero _config/mongoid.yml.example_ a _config/mongoid.yml_
+- Rellenar la base de datos con la información básica, ejecutando <tt>rake db:seed</tt>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Herramientas
+- Robomongo: Interfaz gráfica de administración para MongoDB {robomongo.org}[https://robomongo.org].

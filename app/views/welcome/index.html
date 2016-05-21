@@ -1,0 +1,16 @@
+<h1>Bienvenido a Prophecy</h1>
+<h2>La plataforma de recomendación de productos para tu e-commerce</h2>
+<ul>
+  <li>Recomendaciones personalizadas</li>
+  <li>Cross-selling y Up-selling</li>
+  <li>Merchandising de producto</li>
+</ul>
+<div>
+  <% if user_signed_in? %>
+      Bienvenido <%=  current_user.email %>
+      <%= link_to 'Dashboard', dashboard_path %>
+      <%= link_to 'Salir', destroy_user_session_path, :method => :delete %>
+  <% else %>
+      <%= link_to 'Entrar', new_user_session_path %>
+  <% end %>
+</div>
